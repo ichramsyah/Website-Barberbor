@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking page 2.0</title>
+   
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/main.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguivXYatsDiM-TYHGZ5EOihF-M7GEVgTET06VTzaV2AWdoKfhoTipVyytpavCmJO-I_El_dPyZb3jmu27bx4NpKjfueyerhoSZ6w5_cOwu0PZoiIhpeERZXO5e8Izo3XaKetxhsfm4NoGEgQrFE_3bNpPrryBBF2qGBabySmo4Yzibw-dQwJsVnsxr/s16000/logo%20necobarber%20(1).png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-IXfxZvd+QUnUnE72+OGPFZsI6eEqO/sO+NEbcd+sJy/F50+E+MD+ob/Ggxa+rOQv/pq+6p4mZw1O=" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <nav id="nav" class="container-fluid position-relative align-items-center p-3 shadow">
+          <a href="../index.html" class="icon-link icon-link-hover">Kembali</a>
+        </nav>
+      </header>
+    
+      <!-- Hero Section -->
+      <section id="hero" class="hero section">
+        <img src="https://wallpaperaccess.com/full/1936575.png" alt="">
+    
+        <h2>Booking</h2>
+      </section>
+      <!-- End Hero Section -->
+
+      
+      <!-- Booking section -->
+    <section class="booking">
+      <div class="container py-5">
+        
+        <div class="mb-4">
+            <h2>P<span class="underline">ilih Pelayan</span>an</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="kartu p-3 service-option" data-service="Potong Rambut" data-price="15">
+                        <h5><img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-1-70x62.png" alt=""> Potong Rambut</h5>
+                      
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="kartu p-3 service-option" data-service="Cukur Jenggot" data-price="10">
+                       
+                        <h5><img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-3-70x62.png" alt=""> Cukur Jenggot</h5>
+                      
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="kartu p-3 service-option" data-service="Cukur Kumis" data-price="8">
+                        <h5><img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-4-70x62.png" alt=""> Cukur Kumis</h5>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Select Schedule Section -->
+        <div id="schedule" class="mb-4">
+            <h2>Pi<span class="underline">lih Sched</span>ule</h2>
+            <div >
+                <h5>Hari ini</h5>
+                <div id="today-slots" class="d-flex flex-wrap gap-2">
+                    <button class="time-slot" data-day="today" data-time="9:00 AM">9:00 AM</button>
+                    <button class="time-slot" data-day="today" data-time="10:00 AM">10:00 AM</button>
+                    <button class="time-slot" data-day="today" data-time="11:00 AM">11:00 AM</button>
+                    <button class="time-slot" data-day="today" data-time="12:00 AM">12:00 AM</button>
+                    <button class="time-slot" data-day="today" data-time="13:00 PM">13:00 PM</button>
+                    <button class="time-slot" data-day="today" data-time="14:00 PM">14:00 PM</button>
+                    <button class="time-slot" data-day="today" data-time="15:00 PM">15:00 PM</button>
+                    <button class="time-slot" data-day="today" data-time="16:00 PM">16:00 PM</button>
+                    <button class="time-slot" data-day="today" data-time="17:00 PM">17:00 PM</button>
+                    <button class="time-slot" data-day="today" data-time="18:00 PM">18:00 PM</button>
+                    <button class="time-slot" data-day="today" data-time="19:00 PM">19:00 PM</button>
+                    <button class="time-slot" data-day="today" data-time="20:00 PM">20:00 PM</button>
+                    <button class="time-slot" data-day="today" data-time="21:00 PM">21:00 PM</button>
+                </div>
+            </div>
+            <div>
+                <h5>Besok</h5>
+                <div id="tomorrow-slots" class="d-flex flex-wrap gap-2">
+                    <button class="time-slot" data-day="tomorow" data-time="9:00 AM">9:00 AM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="10:00 AM">10:00 AM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="11:00 AM">11:00 AM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="12:00 AM">12:00 AM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="13:00 PM">13:00 PM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="14:00 PM">14:00 PM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="15:00 PM">15:00 PM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="16:00 PM">16:00 PM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="17:00 PM">17:00 PM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="18:00 PM">18:00 PM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="19:00 PM">19:00 PM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="20:00 PM">20:00 PM</button>
+                    <button class="time-slot" data-day="tomorow" data-time="21:00 PM">21:00 PM</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Select Payment Method Section -->
+        <div class="mb-4">
+            <h2>Pi<span class="underline">lih Pembayar</span>an</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="kartu p-3 payment-option" data-payment="Dana">
+                        <img src="https://cdn1.codashop.com/S/content/common/images/mno/DANA_ID_CHNL_LOGO.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="kartu p-3 payment-option" data-payment="Gopay">
+                       <img src="https://cdn1.codashop.com/S/content/common/images/mno/GO_PAY_ID_CHNL_LOGO.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirm Button -->
+        <button id="confirm-btn">Konfirmasi Pemesanan</button>
+
+        <!-- Ticket Section -->
+        <canvas id="ticketCanvas" width="500" height="300"></canvas>
+        <div id="downloadTicket" class="mt-3"></div>
+        <div id="notification-container" class="hidden"></div>
+
+    </div>
+</section>
+
+
+
+
+    <script>
+        const services = document.querySelectorAll('.service-option');
+        const timeSlots = document.querySelectorAll('.time-slot');
+        const payments = document.querySelectorAll('.payment-option');
+        const confirmBtn = document.getElementById('confirm-btn');
+        const ticketCanvas = document.getElementById('ticketCanvas');
+        const downloadTicket = document.getElementById('downloadTicket');
+    
+        let selectedServices = [];
+        let selectedTime = null;
+        let selectedPayment = null;
+    
+        // Get today's and tomorrow's date
+        const today = new Date();
+        const tomorrow = new Date();
+        tomorrow.setDate(today.getDate() + 1);
+    
+        // Format dates to readable strings
+        const formatDate = (date) => {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        };
+    
+        const todayFormatted = formatDate(today);
+        const tomorrowFormatted = formatDate(tomorrow);
+    
+        services.forEach(service => {
+            service.addEventListener('click', () => {
+                service.classList.toggle('selected');
+                const serviceName = service.dataset.service;
+                const serviceIndex = selectedServices.indexOf(serviceName);
+                if (serviceIndex > -1) {
+                    selectedServices.splice(serviceIndex, 1);
+                } else {
+                    selectedServices.push(serviceName);
+                }
+            });
+        });
+    
+        timeSlots.forEach(slot => {
+    slot.addEventListener('click', () => {
+        // Periksa apakah slot sudah nonaktif
+        if (slot.classList.contains('disabled')) {
+            alert('Slot ini sudah dipesan. Silakan pilih slot lain.');
+            return;
+        }
+        timeSlots.forEach(ts => ts.classList.remove('selected'));
+        slot.classList.add('selected');
+        selectedTime = {
+            day: slot.dataset.day,
+            time: slot.dataset.time
+        };
+    });
+     payments.forEach(payment => {
+            payment.addEventListener('click', () => {
+                payments.forEach(p => p.classList.remove('selected'));
+                payment.classList.add('selected');
+                selectedPayment = payment.dataset.payment;
+            });
+        });
+});
+
+confirmBtn.addEventListener('click', () => {
+    if (selectedServices.length === 0 || !selectedTime || !selectedPayment) {
+        alert('Harap Memilih Terlebih Dahulu!');
+        return;
+    }
+
+    // Referensi container notifikasi
+    const notificationContainer = document.getElementById('notification-container');
+
+    // Tampilkan pemberitahuan "Payment sedang diproses"
+    notificationContainer.innerText = 'Pembayaran sedang diproses...';
+    notificationContainer.className = 'info'; // Tambahkan kelas desain
+    notificationContainer.classList.remove('hidden'); // Tampilkan elemen
+
+    // Simulasi proses selama 3 detik
+    setTimeout(() => {
+        // Ubah pemberitahuan menjadi "Terimakasih sudah memesan"
+        notificationContainer.innerText = 'Terimakasih sudah memesan!';
+        notificationContainer.className = 'success'; // Ubah desain
+
+        // Simulasi pengiriman tiket setelah 2 detik
+        setTimeout(() => {
+            // Hapus pilihan slot waktu setelah booking selesai
+            timeSlots.forEach(slot => {
+                if (slot.classList.contains('selected')) {
+                    slot.classList.remove('selected');
+                    slot.classList.add('disabled'); // Tambahkan kelas disabled
+                    slot.innerText += ' (sudah dipesan)'; // Tambahkan teks sebagai indikasi
+                }
+            });
+            const ctx = ticketCanvas.getContext('2d');
+            ctx.clearRect(0, 0, ticketCanvas.width, ticketCanvas.height);
+
+            // Membuat gradasi linear untuk latar belakang
+            const gradient = ctx.createLinearGradient(0, 0, ticketCanvas.width, ticketCanvas.height);
+            gradient.addColorStop(0, '#E8C600'); // Warna pink muda
+            gradient.addColorStop(1, '#F4D53D'); // Warna peach
+
+            // Terapkan gradasi sebagai latar belakang
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, ticketCanvas.width, ticketCanvas.height);
+
+            // Menambahkan elemen modern dan lucu
+            ctx.fillStyle = '#fff'; // Warna teks
+            ctx.font = 'bold 20px "raleway", cursive'; // Font playful
+
+            // Mendapatkan tanggal hari ini atau besok
+            const today = new Date();
+            const selectedDate = selectedTime.day === "today" 
+                ? today 
+                : new Date(today.setDate(today.getDate() + 1));
+
+            const formattedDate = selectedDate.toISOString().split('T')[0];
+
+            // Tambahkan teks tiket
+            ctx.fillText('🎫 Barberbor Ticket', 20, 40);
+            ctx.fillText(` ${selectedServices.join(', ')}`, 20, 100);
+            ctx.fillText(` ${formattedDate} at ${selectedTime.time}`, 20, 140);
+            ctx.fillText(`Pembayaran Via ${selectedPayment}`, 20, 180);
+
+            // Buat tiket untuk diunduh
+            const ticketUrl = ticketCanvas.toDataURL();
+            const downloadLink = document.createElement('a');
+            downloadLink.href = ticketUrl;
+            downloadLink.download = 'ticket.png';
+            downloadLink.click();
+
+            services.forEach(service => service.classList.remove('selected'));
+            timeSlots.forEach(slot => slot.classList.remove('selected'));
+            payments.forEach(payment => payment.classList.remove('selected'));
+
+            selectedServices = [];
+            selectedTime = null;
+            selectedPayment = null;
+
+            // Sembunyikan pemberitahuan
+            notificationContainer.classList.add('hidden');
+        }, 2000); // 2 detik untuk simulasi pengiriman tiket
+    }, 3000); // 3 detik untuk simulasi payment processing
+});
+
+
+
+    </script>
+</body>
+</html>

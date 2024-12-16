@@ -1,0 +1,306 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+/* body */
+
+/* Header */
+#nav {
+  position: fixed; /* Tetapkan sebagai fixed sejak awal */
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  transition: all 0.3s;
+}
+
+#nav.scroll-fixed {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#header a{
+  text-decoration: none;
+  color: white;
+  font-family: 'raleway';
+  padding: 5px 23px;
+  border-radius: 5px;
+  background-color: rgb(184, 161, 28);
+  transition: 0.3s;
+}
+
+#header a:hover{
+  background-color: rgb(213, 192, 72);
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero h2 {
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  font-family: 'raleway';
+  font-size: 60px;
+  letter-spacing: 3px;
+  font-weight: 900;
+
+}
+
+@media (max-width:480px){
+  .hero{
+    height: 300px;
+  }
+  
+  .hero h2{
+    font-size: 40px;
+  }
+}
+
+
+/* Booking Section */
+
+.booking{
+  background-color: rgb(226, 226, 226);
+}
+
+.booking h2{
+  font-size: 35px;
+}
+
+
+
+.container {
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+/* Styling untuk section heading */
+.container h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+ 
+}
+
+/* Card styling untuk layanan */
+.kartu{
+  background-color: white;
+  margin-top: 10px;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 75px;
+  background-color: rgb(235, 233, 233);
+  border: 2px solid rgb(226, 226, 226);
+  border-radius: 15px;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+@media(max-width:480px){
+  .kartu{
+    margin-bottom: 10px;
+  }
+}
+
+.kartu:hover{
+  border-color: rgb(184, 161, 28);
+  transform: scale(1.02);
+}
+
+.kartu.selected {
+  border-color: rgb(184, 161, 28);
+  transform: rotate(-2deg) scale(0.98) translate(2px, 2px);
+  box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.kartu h5{
+  font-size: 23px;
+  font-family: 'raleway';
+  font-weight: bold;
+}
+
+.kartu img {
+  width: 37px; /* Perbesar ukuran ikon untuk proporsi */
+  height: auto;
+  margin-left: -20px;
+  margin-bottom: 10px; /* Tambahkan jarak antara ikon dan teks */
+}
+
+
+
+
+/* Styling jarak antar elemen time-slot */
+
+#schedule h5{
+  margin-top: 20px;
+  font-size: 27px;
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color:rgb(0, 0, 0);
+  font-family: 'raleway';
+}
+
+/* Jam Pemesanan */
+.time-slot {
+  flex: 1 0 auto;
+  text-align: center;
+  margin: 1px;
+  padding: 12px 29px; 
+  transition: 0.3s;
+  background-color: rgb(235, 233, 233);
+  border: 2px solid rgb(226, 226, 226);
+  border-radius: 10px;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+  font-size: 17px;
+  font-family: 'poppins';
+}
+
+.time-slot:hover{
+  border-color: rgb(184, 161, 28);
+  border: 2px solid rgb(184, 161, 28);
+  transform: scale(1.03);
+}
+
+.time-slot.selected {
+  border-color: rgb(184, 161, 28);
+  transform: rotate(1deg) scale(1.03) translate(2px, 2px);
+  box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.time-slot.disabled {
+  background-color: #b0afaf;
+  border: 2px solid #b0afaf;
+}
+
+.time-slot.disabled:hover{
+  transform: none;
+}
+
+
+
+/* Payment option card styling */
+.payment-option {
+  background-color: white;
+  margin-top: 10px;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 64px;
+  background-color: rgb(235, 233, 233);
+  border: 2px solid rgb(226, 226, 226);
+  border-radius: 15px;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.payment-option:hover {
+
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01) ;
+}
+
+.payment-option.selected {
+  border: 2px solid rgb(184, 161, 28);
+  transform: scale(1.01) ;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.payment-option img{
+  width: 90px;
+}
+
+/* Styling tombol konfirmasi */
+#confirm-btn {
+  width: 100%;
+  height: 70px;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  background-color:rgb(206, 176, 9) ;
+  border: none;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+@media(max-width){
+  #confirm-btn{
+    font-size: 20px;
+  }
+}
+
+#confirm-btn:hover{
+  background-color: rgb(165, 143, 13);
+}
+
+/* Styling canvas tiket */
+canvas {
+  display: none;
+  margin-top: 20px;
+}
+
+#downloadTicket {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Styling notifikasi */
+#notification-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgb(210, 179, 0); /* Default: Biru */
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+#notification-container.hidden {
+  display: none;
+}
+
+#notification-container.success {
+  background-color: #28a745; /* Hijau */
+}
+
+#notification-container.info {
+  background-color: rgb(235, 199, 0); /* Biru */
+}
+
+
+
+.underline {
+  display: inline-block; /* Membatasi garis bawah hanya selebar teks span */
+  border-bottom: 4px solid rgb(202, 172, 0); /* Warna dan ketebalan garis bawah */
+  padding-bottom: 5px; /* Jarak antara teks dan garis */
+}

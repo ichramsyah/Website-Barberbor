@@ -1,0 +1,2734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barberbor</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguivXYatsDiM-TYHGZ5EOihF-M7GEVgTET06VTzaV2AWdoKfhoTipVyytpavCmJO-I_El_dPyZb3jmu27bx4NpKjfueyerhoSZ6w5_cOwu0PZoiIhpeERZXO5e8Izo3XaKetxhsfm4NoGEgQrFE_3bNpPrryBBF2qGBabySmo4Yzibw-dQwJsVnsxr/s16000/logo%20necobarber%20(1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&family=Poppins:wght@100;200&display=swap');</style>
+</head>
+<body>
+    
+
+  
+
+    <!-- Navigation Section -->
+    <div class="top-nav">
+        <div class="logo">
+          <h2><span><i class="fa fa-xing"></i></span> Barberbor</h2>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+      </label>
+        <ul class="menu">
+          <li class="navlink"><a                  href="#home" onclick="toggleSection('home')">        <i class="fa fa-home"></i> Home</a></li>
+          <li class="navlink"><a class="services" href="#services" onclick="toggleSection('services')"><i class="fa fa-scissors"></i> Services</a></li>
+          <span><li class="menu__item"><a href="booking-page/booking page 2.0.html"><div class="fa fa-user-o"></div> Booking</span></a></li>
+   
+      </ul>
+    </div>
+      
+      <script>
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      
+      </script>
+      
+      <script>
+      window.addEventListener('scroll', function() {
+        var navbar = document.querySelector('.top-nav');
+        navbar.classList.toggle('scroll-fixed', window.scrollY > 0);
+      });
+
+      window.addEventListener('scroll', function() {
+        var menu= document.querySelector('.menu a');
+        menu.classList.toggle('scroll-fixed', window.scrollY > 0);
+      });
+
+      window.addEventListener('scroll', function() {
+        var logo = document.querySelector('.logo');
+        logo.classList.toggle('scroll-fixed', window.scrollY > 0);
+      });
+
+      window.addEventListener('scroll', function() {
+        var menu= document.querySelector('.menu li .services');
+        menu.classList.toggle('scroll-fixed', window.scrollY > 0);
+      });
+
+  
+    
+      </script>
+
+
+
+<script>
+  function toggleSection(sectionId) {
+    var sections = document.getElementsByTagName('section');
+    for (var i = 0; i < sections.length; i++) {
+      var section = sections[i];
+      if (section.id === sectionId) {
+        section.style.display = 'block';
+      } else {
+        section.style.display = 'none';
+      }
+    }
+  }
+
+
+</script>
+
+      
+      <style>
+      @import url(https://fonts.googleapis.com/css?family=Raleway);
+    
+    
+
+        .logo span{
+          border: solid 3px yellow;
+          padding: 1px 6px;
+          font-size: 25px;
+        }
+
+      .menu a.scroll-fixed{
+        color: rgb(0, 0, 0);
+      }
+    
+
+      .menu li a{
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+          transition: all 0.5s ease;
+          font-weight: 500;
+          font-size: 18px;  
+          
+      }
+
+      
+        
+
+      .menu li .services{
+        color: white;
+      }
+      
+      .menu li .services.scroll-fixed{
+        color: black;
+      }
+
+      .menu li .services:hover{
+        color: rgb(184, 161, 28);
+      }
+
+      .menu li a:hover{
+          color: rgb(184, 161, 28);
+      
+      }
+      
+    
+    .menu span li a{
+        color: white;
+        background-color: rgb(184, 161, 28);
+        padding: 7px 20px;
+        border-radius: 15px;
+        font-weight: 500;
+        font-size: 16px;
+    }
+      
+    
+
+    .menu span li a:hover{
+        color: black;
+        background-color: rgb(237, 237, 237);
+    }
+      
+      
+      
+      :root{
+        scroll-behavior: smooth;
+      }
+      
+      
+      
+      html, body {
+      margin: 0;
+      height: 100%;
+      background-color: rgb(226, 226, 226);
+      }
+      
+      * {
+      font-family: "Raleway";
+      box-sizing: border-box;
+      }
+      
+      .top-nav {
+        top: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      z-index: 9999;
+      width: 100%;
+      
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      color: #FFF;
+      height: 50px;
+      padding: 2em;
+      transition: 0.3s;
+      }
+      
+      .top-nav.scroll-fixed {
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+
+}
+
+      .logo{
+        color: rgb(255, 255, 255);
+      margin-left: 40px;
+      font-size: 20px;
+      margin-top: 7px;
+      }
+
+      .logo.scroll-fixed{
+        color: black;
+      }
+      
+      .menu {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      margin-right: 40px;
+      padding: 0;
+      margin-top: 25px;
+      
+      }
+      
+      .menu  li {
+      margin: 0 1rem;
+    
+      }
+      
+    
+      .menu  li::after{
+      display: block;
+      content: "";
+      border-bottom: solid 2px rgb(184, 161, 28);
+      padding-bottom: 5%;
+      transform: scaleX(0);
+      transition: transform 300ms ease-in-out;
+      }
+      
+      .menu li:hover:after {
+      transform: scaleX(1 );
+      }
+      
+      .menu span li::after{
+        display: block;
+      content: "";
+      
+      border-bottom: none;
+      padding-bottom: 5%;
+      transform: scaleX(0);
+      transition: transform 300ms ease-in-out;
+      
+      }
+      
+      .menu-button-container {
+      display: none;
+      height: 100%;
+      width: 30px;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      }
+      
+      #menu-toggle {
+      display: none;
+      }
+      
+      .menu-button,
+      .menu-button::before,
+      .menu-button::after {
+      display: block;
+      background-color: #000000;
+      position: absolute;
+      height: 2px;
+      width: 28px;
+      transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      border-radius: 2px;
+      }
+      
+      .menu-button::before {
+      content: '';
+      margin-top: -8px;
+      }
+      
+      .menu-button::after {
+      content: '';
+      margin-top: 8px;
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button::before {
+      margin-top: 0px;
+      transform: rotate(45deg);
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button {
+      background: rgba(255, 255, 255, 0);
+      }
+      
+      #menu-toggle:checked + .menu-button-container .menu-button::after {
+      margin-top: 0px;
+      transform: rotate(-45deg);
+      }
+      
+      @media (max-width: 700px) {
+      .menu-button-container {
+        display: flex;
+      }
+      .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      #menu-toggle:checked ~ .menu li {
+      
+        height: 3em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .menu > li {
+        display: flex;
+        justify-content: center;  
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: rgb(255, 255, 255);
+      backdrop-filter: blur(5px);
+      }
+      .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+      }
+
+      
+
+      .menu span li a{
+        color: white;
+        background-color: rgb(184, 161, 28);
+        padding: 9px 100px;
+        
+        border-radius: 10px;
+        font-weight: 500;
+    }
+    
+      
+      .menu li .services{
+        color: black;
+      }
+      
+    }   
+      
+      @media (max-width: 480px){
+      .top-nav{
+          width: 100%;
+          position: fixed;
+          padding: 1em;
+      }
+      
+      .menu span li a{
+        border-radius: 0 0 50px 50px;
+      }
+
+      .logo{
+          margin-left: 0;
+          font-size: 15px;
+          margin-top: 0;
+      }
+      .menu  li {
+      overflow: hidden;
+    
+      }
+      .menu li a{
+          color: rgb(0, 0, 0);
+          text-decoration: none;
+          transition: all 0.3s ease;
+          font-weight: 500;
+          font-size: 19px;  
+          font-weight: 500;
+      }
+      }
+      
+      </style>
+      
+      <script>
+        // Function to close the mobile menu when a menu item is clicked
+        function closeMobileMenu() {
+          var menuToggle = document.getElementById('menu-toggle');
+          if (menuToggle.checked) {
+            menuToggle.checked = false;
+          }
+        }
+      
+        // Attach click event listener to menu items
+        var menuItems = document.querySelectorAll('.menu li a');
+        for (var i = 0; i < menuItems.length; i++) {
+          menuItems[i].addEventListener('click', closeMobileMenu);
+        }
+      
+        // Attach click event listener to contact button
+        var contactButton = document.querySelector('.menu span li a');
+        contactButton.addEventListener('click', closeMobileMenu);
+      </script>
+      
+
+
+
+
+
+      <style>
+  
+        .dialog-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+      
+        .dialog-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+      
+        .dialog-box {
+            background-color: rgb(39, 39, 39);
+            border-radius: 5px;
+            padding: 20px;
+            width: 50%;
+            text-align: center;
+            font-size: 16px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+      
+        .dialog-box h2{
+            color: white ;
+            font-family: 'poppins';
+            font-size: 30px;
+            font-weight: 300;
+        }
+    
+        .dialog-overlay.show .dialog-box {
+            opacity: 1;
+            transform: scale(1);
+        }
+      
+        .dialog-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            align-items: center;
+        }
+      
+        .dialog-button {
+        display: inline-block;
+        padding: 10px 40px;
+        margin: 10px;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        text-decoration: none;
+        border: none;   
+        transition: 0.3s ;
+        }
+    
+        .dialog-button:hover{
+            background-color: rgb(31, 31, 31);
+            border-bottom: solid 1px white;
+        
+        }
+      
+        .whatsapp-icon {
+            font-size: 20px;
+            color: green;
+            margin-top: 10px;
+        }
+      
+        .form-input {
+            display: block;
+        width: 97%;
+        padding: 8px;
+        outline: none;
+        border: none;
+        margin-bottom: 20px;
+        text-decoration: none;
+        background-color: black;
+        color: white;
+        box-sizing: border-box;
+        transition: 0.3s;
+        }
+      
+        .form-input:focus{
+            outline: none;
+            border-bottom: solid 2px gray;
+            padding-bottom: 1.4%;
+        }
+    
+        .thank-you {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+        @media only screen and (max-width: 720px){
+        .dialog-box {
+        background-color: rgb(39, 39, 39);
+        border-radius: 5px;
+        padding: 20px;
+        width: 90%;
+        text-align: center;
+        font-size: 16px;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+  
+    .dialog-box h2{
+        color: white ;
+        font-family: 'poppins';
+        font-size: 30px;
+        font-weight: 300;
+    }
+
+    .dialog-button {
+        display: inline-block;
+        padding: 10px 35px;
+        margin: 10px;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        text-decoration: none;
+        border: none;   
+        transition: 0.3s ;
+        }
+
+        .form-input:focus{
+            outline: none;
+            border-bottom: solid 2px gray;
+            padding-bottom: 1.9%;
+        }
+    }
+    </style>
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Hero Section -->
+<section id="home">
+
+    <div  class="header animated">
+        <div  class="header-item">
+            <img src="https://wallpaperaccess.com/full/1936575.png" alt="">
+        <div id="animasi" class="tes animated"> 
+            <h1 class="txt"><b> The Best</b></h1>
+            <h2 class="txt">Masters of the Blade</h2>
+            <h3 class="txt">At Barbershop, you will find an atmosphere of old school sophistication with modern amenities.We cater to gentlemen on the go. So stop in on your lunch break to get an old-fashioned straight razor shave or a perfect haircut.</h3>
+          </div>
+          </div>
+    </div>
+
+
+
+
+<br><br><br><br><br>
+<style>
+  .header{
+    width: 100%;
+    height: 500px;
+  }
+
+  .header-item{
+    width: 100%;
+    text-align: center;
+  }
+
+  .header img{
+    object-fit: cover;
+    width: 100%;
+    height: 630px;
+  }
+
+  
+
+  .header .txt{
+    color: white;
+    font-family: 'poppins';
+    
+  }
+
+  .header h1{
+  margin-top: -480px;
+    letter-spacing: 20px;
+  
+  }
+
+  .header h2{
+    font-size: 80px;
+    font-weight: 900;
+    margin-top: -20px;
+  
+  }
+
+  .header h3{
+    font-size: 15px;
+    letter-spacing: 3px;
+    margin: 190px;
+    margin-top: -20px;
+  }
+
+  @media (max-width: 480px){
+    .header img{
+    object-fit: cover;
+    width: 100%;
+    height: 650px;
+  }
+
+  
+
+  .header .txt{
+    color: white;
+    font-family: 'poppins';
+    
+  }
+
+  .header h1{
+  margin-top: -530px;
+    letter-spacing: 14px;
+    font-size: 17px;
+  
+  }
+
+  .header h2{
+    font-size: 40px;
+    letter-spacing: 1px;
+    margin: 20px;
+    font-weight: 900;
+    margin-top: -5px;
+  
+  }
+
+  .header h3{
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin: 30px;
+    margin-top: 10px;
+  }
+  }
+</style>
+
+
+
+<!-- Layanan Section -->
+<div class="layanan">
+  <h2>Layana<span>n Kami</span></h2>
+  <h3>Barbershop offers world-class men's haircuts, beard grooming, and hot razor shaves. Here are just some of the services we are known for.</h3>
+</div>
+
+<div class="layanan-header">
+  <div class="layanan-item">
+    <img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-1-70x62.png" alt="">
+    <h2><a href=""> Traditional Haircut</a></h2>
+    <h3>One of the most popular services our barbers provide</h3>
+  </div>
+  <div class="layanan-item">
+    <img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-2-70x62.png" alt="">
+    <h2><a href=""> Shaves</a></h2>
+    <h3>Our shaving services will make you look really handsome</h3>
+  </div>
+  <div class="layanan-item">
+    <img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-3-70x62.png" alt="">
+    <h2><a href="#"> Beard Trim</a></h2>
+    <h3>Well-trimmed beard is a must-have element of every men's image</h3>
+  </div>
+  <div class="layanan-item">
+    <img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-4-70x62.png" alt="">
+    <h2><a href="#"> Mustache Trim</a></h2>
+    <h3>Mustaches also need to be trimmed regularly</h3>
+  </div>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&family=Poppins:wght@100;200&family=Wix+Madefor+Display&display=swap');
+  .layanan{
+    width: 100%;
+    text-align: center;
+  
+    height: 200px;
+  }
+
+  .layanan h2{
+    color: black;
+    font-size: 45px;
+    letter-spacing: 5px;
+    font-family: 'raleway';
+    margin-top: 100px;
+
+  }
+
+  .layanan h2 span{
+    border-bottom: solid 5px rgb(184, 161, 28);
+    padding-bottom: 5px;
+  }
+
+  .layanan h3{
+    font-family: 'Arial';
+    color: #8e8e8e;
+    font-weight: 500;
+    margin: 300px;
+    margin-top: 2px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px){
+    .layanan h2{
+    color: black;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-family: 'raleway';
+    margin-top: 100px;
+
+  }
+
+  .layanan h2 span{
+    border-bottom: solid 3px rgb(184, 161, 28);
+    padding-bottom: 3px;
+  }
+
+  .layanan h3{
+    font-family: 'Arial';
+    color: #8e8e8e;
+    font-weight: 300;
+    margin: 40px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    font-size: 13px;
+  }
+  }
+
+
+  .layanan-header{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  
+    
+  }
+  .layanan-item{
+  
+    width: 280px;
+  }
+  .layanan-item img {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    
+  }
+
+  .layanan-item h2 a{
+    color: black;
+    text-decoration: none;
+    font-size: 19px;
+    margin-top: 40px;
+    transition: 0.3s;
+  }
+
+  .layanan-item h2 a:hover{
+    color: rgb(184, 161, 28);
+  }
+
+  .layanan-item h2 a::after{
+    color: black;
+  }
+  .layanan-item h3{
+    font-family: 'Arial';
+    color: #8e8e8e;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    font-size: 14px;
+  
+  }
+
+  @media (max-width: 480px){
+    .layanan-item{
+      margin-top: 40px;
+    }
+
+    .layanan-item h3{
+      margin-top: -5px;
+    }
+  }
+</style>
+
+
+<br><br><br><br><br>
+
+
+
+  <div class="open">
+      <div class="open-item">
+          <img>
+      </div>
+      <div class="open-item">
+      
+        <h1><i class="fa fa-clock"> </i> Opening Hours</h1>
+        <h2>Senin - Jumat</h2>
+        <p>09:00 - 21:00</p>
+        <h2>Sabtu - Minggu</h2>
+        <p>09:00 - 21:00</p>
+      
+    </div>
+  </div>
+
+
+
+<style>
+  .open {
+      width: 100%;
+      height: 500px;
+      display: flex;
+  }
+
+  .open-item{
+      background-color: rgb(255, 255, 255);
+      height: 500px;
+    
+      width: 100%;
+      text-align: center;
+  }
+
+  .open-item img{
+      width: 100%;
+      object-fit: cover;
+      height: 500px;
+      background-image: url('https://wallpaperaccess.com/full/1936593.jpg');
+      background-attachment:fixed;
+      margin: 0;
+  }
+
+  .open-item i{
+    font-size: 34px;
+    color: goldenrod;
+  }
+
+  .open-item h1{
+    margin-top: 100px;
+    font-size: 32px;
+  }
+
+  .open-item h2{
+    color: #8e8e8e;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 50px;
+  }
+
+  .open-item p{
+    color: black;
+    margin-top: -10px;
+    font-size: 16px;
+  }
+
+
+
+
+
+  @media (max-width:480px){
+
+    .open {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .open-item{
+      background-color: rgb(255, 255, 255);
+      height: 300px;
+      width: 100%;
+  }
+
+  .open-item img{
+      width: 100%;
+      object-fit: cover;
+      height: 400px;
+      background-size: 100% 100%;
+  }
+
+  .open-item i{
+    font-size: 24px;
+    color: goldenrod;
+  }
+
+  .open-item h1{
+    margin-top: 50px;
+    font-size: 22px;
+  }
+
+  .open-item h2{
+    color: #8e8e8e;
+    font-size: 19px;
+    font-weight: 300;
+    margin-top: 30px;
+  }
+
+  .open-item p{
+    color: black;
+    margin-top: -10px;
+    font-size: 16px;
+  }
+
+  }
+  
+</style>
+
+
+
+<br><br><br><br><br><br><br><br><br>
+
+
+  <div class="barber">
+    <h2><span> Our Bar</span>ber</h2>
+    <h3>We employ only highly qualified barbers who are not just professionals, but also enjoy maintaining the atmosphere of a classic barbershop.</h3>
+  </div>
+  <div class="barber-header">
+  <div class="barber-item">
+    <img src="image/iam.jpeg" alt="">
+    <h2>Ichramsyah A</h2>
+    <h3>is the founder and owner of our barbershop.</h3>
+    <a class="fa fa-instagram" href="#"></a>
+    <a class="fa fa-facebook" href="#"></a>
+  </div>
+  <div class="barber-item">
+    <img src="image/pirjaa.JPG" alt="">
+    <h2>Viyrza Azhar</h2>
+    <h3>Harry brings a detailed, meticulous approach to styling.</h3>
+    <a class="fa fa-instagram" href="#"></a>
+    <a class="fa fa-facebook" href="#"></a>
+  </div>
+  <div class="barber-item">
+    <img src="image/gapin.jpg" alt="">
+    <h2>Gavin Abdul</h2>
+    <h3>Phillips has several years of experience in the barber industry.</h3>
+    <a class="fa fa-instagram" href="#"></a>
+    <a class="fa fa-facebook" href="#"></a>
+  </div>
+</div>
+
+<style>
+  .barber{
+    width: 100%;
+    margin-top: -150px;
+  
+  }
+
+  .barber h2{
+    color: black;
+    font-size: 45px;
+    letter-spacing: 5px;
+    font-family: 'raleway';
+    
+    text-align: center;
+
+  }
+
+  .barber h2 span{
+    border-bottom: solid 5px rgb(184, 161, 28);
+    border-radius: 0 0 5px 5px;
+    padding-bottom: 5px;
+  }
+  
+
+  .barber h3{
+    font-family: 'Arial';
+    color: #8e8e8e;
+    font-weight: 300;
+    margin: 200px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    font-size: 16px;
+  
+  }
+
+  .barber-header{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  margin-top: -150px;
+    height: 700px;
+  }
+  .barber-item {
+    border-radius: 10px 10px 10px 10px;
+  width: 350px;
+  height: 550px;
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+
+  }
+
+  .barber-item img{
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    width: 100%;
+    text-align: center;
+    height: 300px;
+  }
+
+  .barber-item h2{
+    margin-top: 45px;
+    font-size: 20px;
+  }
+
+  .barber-item h3{
+    font-size: 13px;
+    color: gray;
+    margin-top: 20px;
+    font-weight: 300;
+    margin-right: 20px;
+    margin-left: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+  
+  }
+
+  .barber-item a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin: 20px;
+    transition: 0.3s;
+    
+    }
+    .barber-item a:hover{
+      color: gold;
+    }
+
+
+    @media (max-width:480px){
+    .barber h2{
+      color: black;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-family: 'raleway';
+    margin-top: -200px;
+
+    }
+
+    .barber{
+      margin-top: 210px;
+    }
+    .barber h2 span{
+      border-bottom: solid 3px rgb(184, 161, 28);
+    padding-bottom: 3px;
+  }
+
+  .barber h3{
+    font-family: 'Arial';
+    color: #8e8e8e;
+    font-weight: 300;
+    margin: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    font-size: 13px;
+  
+  }
+  
+  .barber-header{
+    margin-top: 0;
+  }
+    }
+</style>
+    
+
+<script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+
+
+<div class="middle">
+  <div class="middle-item">
+      <h1><span>Pelayan</span>an Barber<span class="spann">bor</span></h1>
+      <p>We take pride in each service we provide. Every effort is made to give you the best barber experience whatever your haircut or shaving style is. Feel free to browse our services list to learn more about the services we offer our clients and guests.</p>
+      <a href="#services" onclick="toggleSection('services')"> Lihat Layanan</a>
+    </div>
+  <div class="middle-item">
+    <div class="middle-img">
+    <img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/box-post-1-530x490.png" alt="">
+  </div>
+  </div>
+</div>
+
+<style>
+  .middle {
+    background-color: #343131;
+    width: auto;
+    height: 520px;
+    display: flex;
+    margin: 5%;
+    margin-top: -50px;
+  }
+
+  .middle-item{
+      background-color: rgb(54, 50, 50);
+      height: 520px;
+      width: 100%;
+  }
+  
+  .middle-img{
+    background-color: rgb(54, 50, 50);
+    
+  
+  
+    display: flex;
+    height: 100%;
+  }
+
+  .middle-item img{
+    
+object-fit: cover;
+  width: 100%;
+  height: 100%;
+  }
+
+  .middle h1{
+    color: white;
+    font-family: 'poppins';
+    font-size: 48px;
+    margin-right: 20px;
+    margin-left: 14%;
+    margin-top: 10%;
+  }
+
+  .middle h1 span .spann{
+    border-bottom: solid 4px darkgoldenrod;
+    padding-bottom: 4px;
+    font-family: 'poppins';
+  }
+
+  .middle h1 span{
+    border-bottom: solid 4px rgb(165, 144, 25);
+    
+    font-family: 'poppins';
+  }
+
+
+  .middle p{
+    color: #8e8e8e;
+    font-family: 'poppins';
+    margin-left: 14%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+    margin-top: -10px;
+  }
+
+  .middle a{
+    font-family: 'poppins';
+    background-color: rgb(165, 144, 25);
+    padding: 15px 50px;
+    font-size: 14px;
+    color: white;
+    margin-left: 14%;
+    text-decoration: none;
+    border-radius: 35px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+  }
+
+  .middle a:hover{
+    background-color: white;
+    color: black;
+  }
+
+  @media only screen and (max-width: 480px){
+    .middle {
+    background-color: #343131;
+    width: auto;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+    margin-top: 1100px;
+  }
+
+  .middle-item{
+      background-color: rgb(54, 50, 50);
+      height: 320px;
+      width: 100%;
+      justify-content: center;
+
+      
+  }
+
+  .middle-item img{
+
+  width: 210px;
+  height: 210px;
+    
+  position: absolute;
+
+  
+  
+  
+  }
+  .middle-img{
+    display: flex;
+    justify-content: end;
+    
+    align-items: end;
+  }
+
+  .middle h1{ 
+    color: white;
+    font-family: 'poppins';
+    font-size: 28px;
+    margin-bottom: 30px;
+    margin-left: 8%;
+    margin-top: 8%;
+  }
+
+  .middle h1 span .spann{
+    border-bottom: solid 3px darkgoldenrod;
+    padding-bottom: 3px;
+    font-family: 'poppins';
+  }
+
+  .middle h1 span{
+    border-bottom: solid 3px rgb(165, 144, 25);
+    
+    font-family: 'poppins';
+  }
+
+
+  .middle p{
+    color: #8e8e8e;
+    font-family: 'poppins';
+    margin-left: 8%;
+    margin-right: 17%;
+    margin-bottom: 20px;
+    z-index: 20;
+    height: 200px;
+    font-size: 15px;
+    margin-top: -10px;
+    position: absolute;
+  }
+
+  .middle a{
+    font-family: 'poppins';
+    position: absolute;
+    background-color: rgb(165, 144, 25);
+    padding: 12px 30px;
+    font-size: 13px;
+    color: white;
+    margin-left: 8%;
+    text-decoration: none;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-top: 200px;
+    transition: 0.3s;
+  }
+
+  .middle a:hover{
+    background-color: white;
+    color: black;
+  }
+  }
+</style>
+
+
+
+
+
+<div class="address">
+  <h2>Al<span>am</span>at</h2>
+  <p>Jl. kemang Barat X A No 12, Kemang
+    Jakarta Selatan, Jakarta, Indonesia</p>
+</div>
+<style>
+  .address{
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+
+  .address h2{
+    
+    font-size: 50px;
+  
+  }
+
+  .address span{
+    border-bottom: solid 4px rgb(165, 144, 25);
+    border-radius: 5px;
+
+  }
+
+  .address p{
+    font-family: 'Arial';
+    color: #8e8e8e;
+    font-weight: 300;
+    margin-inline: 200px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: -10px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px){
+    .address{
+      margin-top: 450px;
+      margin-bottom: 10px;
+    }
+
+    .address h2{
+
+    font-size: 30px;
+  
+  }
+
+  .address span{
+    border-bottom: solid 3px rgb(165, 144, 25);
+    border-radius: 5px;
+
+  }
+
+  .address p{
+    font-family: 'Arial';
+    color: #8e8e8e;
+    font-weight: 300;
+    margin-inline: 25px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+  }
+  }
+</style>
+
+<style>
+  #map {
+      height: 400px;
+      width: 900px;
+      margin: 0 auto;
+      border: solid 2px white;
+      display: flex;
+      justify-content: end;
+
+  }
+
+  @media (max-width:480px){
+    #map {
+      width: 100%;
+      height: 250px;
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+</head>
+<body>
+<div id="map"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+<script>
+  // Inisialisasi peta dengan koordinat yang diberikan dan zoom yang ditingkatkan
+  var map = L.map('map').setView([-6.242698460916609, 106.83633257619692], 18);
+
+  // Tambahkan layer peta dasar menggunakan Leaflet Provider Tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+  }).addTo(map);
+
+  // Tambahkan marker pada lokasi yang diberikan
+  var marker = L.marker([-6.242698460916609, 106.83633257619692]).addTo(map);
+
+  // Tambahkan info popup pada marker
+  marker.bindPopup("<b>Jl. Kemang Barat X No.1</b><br>Kemang, Jakarta Selatan");
+
+  // Tambahkan label pada marker
+  marker.bindTooltip("Jl. kemang Barat X No.1").openTooltip();
+</script>
+
+
+
+
+
+
+
+
+<div class="testimoni">
+  <h2> Te<span>stimon</span>ial</h2>
+  <p>hese reviews that our clients have recently submitted are the best way to learn more about our barbershop level of service and customer support.</p>
+</div>
+<style>
+  .testimoni{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+
+  .testimoni h2{
+    
+    font-size: 50px;
+  
+  }
+
+  .testimoni span{
+    border-bottom: solid 4px rgb(165, 144, 25);
+    border-radius: 5px;
+
+  }
+
+  .testimoni p{
+    font-family: 'Arial';
+    color: #8e8e8e;
+    font-weight: 300;
+    margin-inline: 200px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: -10px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px){
+    .testimoni{
+      margin-top: 120px;
+      margin-bottom: 40px;
+    }
+
+    .testimoni h2{
+    
+    font-size: 30px;
+  
+  }
+
+  .testimoni span{
+    border-bottom: solid 3px rgb(165, 144, 25);
+    border-radius: 5px;
+
+  }
+
+  .testimoni p{
+    font-family: 'Arial';
+    color: #8e8e8e;
+    font-weight: 300;
+    margin-inline: 25px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 10px;
+
+  }
+  }
+</style>
+
+
+
+<div class="hotel">
+    <div class="hotel-item">
+    
+    <img src="https://images-tm.tempo.co/all/2022/10/08/812557/812557_1200.jpg" alt="">
+
+    <h2><b>Anies Baswedan</b></h2>
+    <h3>"Setelah mencoba beberapa toko barber di sekitar kota, saya menemukan tempat yang sempurna di toko barber ini. Saya sangat puas dengan hasilnya dan akan merekomendasikan toko barber ini kepada teman-teman saya."</h3>
+    <div class="iconn">
+      <a href=""><i class="fa fa-linkedin"></i></a>
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="hotel-item">
+    
+    <img src="https://img.jakpost.net/c/2023/11/24/2023_11_24_144670_1700807264._large.jpg" alt="">
+
+    <h2><b>Prabowo Subianto</b></h2>
+    <h3>"Saya sangat senang dengan layanan yang diberikan oleh toko barber ini.  Hasil potongan rambut yang presisi dan gaya yang sesuai dengan keinginan saya. Saya sangat merekomendasikan toko barber ini kepada semua orang!"</h3>
+    <div class="iconn">
+      <a href=""><i class="fa fa-linkedin"></i></a>
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="hotel-item">
+    
+    <img src="https://globalmedianews.co.id/wp-content/uploads/2020/01/43d0897159987ef5d32291zcp-111851.jpg" alt="">
+
+    <h2><b>Jokowi Dodo</b></h2>
+    <h3>"Hai saya Spider Gwen, saya senang bisa memotong rambut disini, pelayanan yang ramah dan tempat yg nyaman. Sebelum saya akting dalam film selanjutnya saya sempatkan untuk mampir ke barber ini!"</h3>
+    <div class="iconn">
+      <a href=""><i class="fa fa-linkedin"></i></a>
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-facebook"></i></a>
+    </div>
+  </div>
+  </div>
+  
+
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&family=Poppins:wght@100;200&display=swap');
+
+
+    .hotel{
+    display: flex;
+    z-index: 1;
+      justify-content: center;
+      margin: 0;
+      margin-bottom: 100px;
+      width: 100%;
+      font-family: 'poppins';
+      height: auto;
+    }
+
+    .hotel-item{
+      width: 100%;
+      height: 350px;
+      border-radius: 100px 10px 100px 10px;
+      background-color: white;
+      display: flex;
+      margin: 10px;
+      justify-content: center;
+    }
+
+    
+    .hotel-item a{
+      text-decoration: none;
+      color: black;
+    }
+
+    .hotel img{
+      width:110px;
+      height:110px;
+      margin-top: 70px;
+      object-fit: cover;
+      border-radius: 70px;
+      margin-left: 110px;
+    }
+
+    .hotel-item h2{
+      color: black;
+      margin-top: -100px;
+      margin-left: 29%;
+    }
+
+    .hotel-item h3{
+      margin-left: 29%;
+      margin-right: 20%;
+      font-size: 16px;
+      color: darkgray;
+      font-weight: 300;
+      margin-top: -1px;
+      margin-bottom: 60px;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+
+    .hotel-item .iconn{
+      margin-left: 29%;
+    
+      font-size: 20px;
+
+    }
+    .hotel-item i{
+      margin-right: 30px;
+    }
+  
+    .slick-prev{
+      margin-left: 4%;
+      margin-right: 40px;
+      z-index: 200;
+    }
+
+    .slick-next {
+      margin-right: 4%;
+      margin-left: 40px;
+      z-index: 200;
+    }
+
+    .slick-prev, .slick-next {
+    background-color: 0;
+      border: none;
+      color: rgb(255, 255, 255);
+      margin-top: 150px;
+width: 150px; /* Ubah ukuran lebar sesuai kebutuhan */
+height: 70px; /* Ubah ukuran tinggi sesuai kebutuhan */
+padding: 5px; /* Tambahkan ruang di sekitar tombol */
+line-height: 10px; /* Sesuaikan tinggi garis untuk tombol dengan teks */
+transition: .2s linear;
+}
+
+
+.slick-prev:hover, .slick-next:hover{
+
+transform: scale(1.1);
+}
+
+
+
+@media (max-width: 768px) {
+.hotel-item {
+  width: 100%; /* Mengubah lebar elemen menjadi 100% */
+  margin-bottom: 20px; /* Menambahkan margin bawah antara elemen */
+}
+}
+
+@media (max-width: 480px){
+.slick-prev, .slick-next {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hotel{
+    display: flex;
+    z-index: 10;
+      justify-content: center;
+      margin: 0;
+      margin-top: 60px;
+    
+      width: 100%;
+      font-family: 'poppins';
+      height: auto;
+    }
+
+    .hotel-item{
+      width: 100%;
+      height: 450px;
+      border-radius: 0 240px 240px 0;
+      background-color: white;
+      display: flex;
+      margin: 5px;
+      justify-content: center;
+    }
+
+    .hotel-item2{
+      width: 200px;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: start;
+    }
+
+    .hotel-item a{
+      text-decoration: none;
+      color: black;
+    }
+
+    .hotel img{
+      width:95px;
+      height:95px;
+      margin-top: 40px;
+      object-fit: cover;
+      border-radius: 70px;
+      margin-left: 7%;
+      
+    }
+
+    .hotel-item h2{
+      color: black;
+      margin-top: 29px;
+      margin-left: 7%;
+      font-size: 20px;
+    }
+
+    .hotel-item h3{
+      margin-left: 7%;
+      margin-right: 15%;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: darkgray;
+      font-weight: 300;
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
+
+    .hotel-item .iconn{
+      margin-left: 8%;
+    
+      font-size: 20px;
+
+    }
+    .hotel-item i{
+      margin-right: 40px;
+    }
+    
+    .slick-prev{
+      margin-left: -38px;
+      margin-right: 0;
+      z-index: 0;
+    }
+
+    .slick-next {
+      margin-right: 2%;
+      margin-left: -15px;
+      z-index: 0;
+    }
+
+
+    .slick-prev, .slick-next {
+    background-color: 0;
+      border: none;
+      border-radius: 0 60px 60px 0;
+      color: black;
+      margin-top: 15px;
+width: 180px; /* Ubah ukuran lebar sesuai kebutuhan */
+height: 40px; /* Ubah ukuran tinggi sesuai kebutuhan */
+padding: 5px; /* Tambahkan ruang di sekitar tombol */
+line-height: 10px; /* Sesuaikan tinggi garis untuk tombol dengan teks */
+transition: .2s linear;
+}
+  }
+  </style>
+
+<script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.hotel').slick({
+      infinite: false,
+      slidesToShow: 1, // Ubah nilai ini sesuai dengan kebutuhan Anda
+      slidesToScroll: 1,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      prevArrow: '<button class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
+      nextArrow: '<button class="slick-next"><i class="fa fa-chevron-right"></i></button>',
+      responsive: [
+  {
+    breakpoint: 480, // Lebar viewport saat tampilan ponsel aktif
+    settings: {
+      slidesToShow: 1, // Jumlah elemen hotel-item pada tampilan ponsel
+      slidesToScroll: 1
+    }
+  }
+]
+      
+    });
+
+    
+  });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+<section id="services" style="display: none">
+
+  <div class="header2">
+    <div class="header2-item">
+        <img src="https://wallpaperaccess.com/full/1936575.png" alt="">
+      
+        <h1 class="txt"><b> Our</b></h1>
+        <h2 class="txt"><b>Services</b></h2>
+      </div>
+</div>
+
+<br><br><br><br><br>
+<style>
+.header2{
+width: 100%;
+height: 360px;
+}
+
+.header2-item{
+width: 100%;
+text-align: center;
+}
+
+.header2 img{
+object-fit: cover;
+width: 100%;
+height: 380px;
+}
+
+
+
+.header2 .txt{
+color: white;
+font-family: 'poppins';
+
+}
+
+.header2 h1{
+margin-top: -290px;
+letter-spacing: 10px;
+
+}
+
+.header2 h2{
+  margin-top: -20px;
+  letter-spacing: 5px;
+font-size: 80px;
+font-weight: 900;
+
+
+}
+
+
+
+@media (max-width: 480px){
+.header2 img{
+object-fit: cover;
+width: 100%;
+height: 240px;
+}
+
+
+
+.header2 .txt{
+color: white;
+font-family: 'poppins';
+
+}
+
+.header2 h1{
+margin-top: -150px;
+letter-spacing: 14px;
+font-size: 17px;
+
+}
+
+.header2 h2{
+font-size: 40px;
+letter-spacing: 3px;
+margin: 20px;
+font-weight: 900;
+margin-top: -5px;
+
+}
+
+
+}
+</style>
+
+
+
+
+<div class="price">
+  <h2><span>Price</span> list</h2>
+  <h3>Kami menyediakan Harga pilihan yang dapat disesuaikan dengan gaya dan kebutuhan Anda.</h3>
+</div>
+
+<style>
+.price{
+    width: 100%;
+    text-align: center;
+  
+    height: 200px;
+  }
+
+  .price h2{
+    color: black;
+    font-size: 45px;
+    letter-spacing: 5px;
+    font-family: 'raleway';
+    margin-top:2px;
+
+  }
+
+  .price h2 span{
+    border-bottom: solid 5px rgb(184, 161, 28);
+    padding-bottom: 5px;
+  }
+
+  .price h3{
+    font-family: 'Arial';
+    color: #8e8e8e;
+    font-weight: 500;
+    margin: 300px;
+    margin-top: 2px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px){
+    .price h2{
+    color: black;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-family: 'raleway';
+    margin-top: -180px;
+
+  }
+
+  .price h2 span{
+    border-bottom: solid 3px rgb(184, 161, 28);
+    padding-bottom: 3px;
+  }
+
+  .price h3{
+    font-family: 'Arial';
+    color: #8e8e8e;
+    font-weight: 300;
+    margin: 40px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    font-size: 13px;
+  }
+  }
+
+</style>
+
+
+
+
+<div class="price-header">
+  <div class="price-item">
+    <img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-1-70x62.png" alt="">
+    <h2><a href=""> Traditional Haircut</a></h2>
+    <h3><span>Rp</span>30.<span>000</span></h3>
+  </div>
+  <div class="price-item">
+    <img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-2-70x62.png" alt="">
+    <h2><a href=""> Shaves</a></h2>
+    <h3><span>Rp</span>10.<span>000</span></h3>
+  </div>
+  <div class="price-item">
+    <img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-3-70x62.png" alt="">
+    <h2><a href="#"> Beard Trim</a></h2>
+    <h3><span>Rp</span>10.<span>000</span></h3>
+  </div>
+  <div class="price-item">
+    <img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-4-70x62.png" alt="">
+    <h2><a href="#"> Mustache Trim</a></h2>
+    <h3><span>Rp</span>10.<span>000</span></h3>
+  </div>
+</div>
+
+
+<style>
+.price-header{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: 'raleway';
+  
+    
+  }
+  .price-item{
+    height:250px ;
+    width: 280px;
+    transition: 0.3s;
+
+  }
+
+  .price-item:hover{
+    background-color: white;
+    transform: scale(1.1);
+  }
+
+  
+  .price-item img {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+  }
+
+  .price-item h2 a{
+    color: black;
+    text-decoration: none;
+    font-size: 19px;
+    
+    transition: 0.3s;
+  }
+
+  .price-item h2 a:hover{
+    color: rgb(184, 161, 28);
+    
+  }
+
+  .price-item h2 a::after{
+    color: black;
+  }
+  .price-item h3{
+  
+    color: #000000;
+    font-weight: bold;
+  
+    margin-top: 10px;
+    font-size: 34px;
+  }
+
+  .price-item h3 span{
+    font-size: 25px;
+  
+  
+
+  }
+
+  @media (max-width: 480px){
+    .price-item{
+      margin-top: -10px;
+      transition: none;
+      height: 276px;
+    }
+
+    .price-item:hover{
+      transform: none;
+      background-color: rgb(226, 226, 226)
+    }
+    
+
+    .price-item h3{
+  
+  color: #000000;
+  font-weight: bold;
+
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.price-item h3 span{
+  font-size: 21px;
+
+  }
+  
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="cukuran">
+  <h2 class="choose">Choose y<span>our Haircu</span>t</h2>
+<div class="slider-nav">
+  <button class="nav-btn active" onclick="changeSlide(0)">Low Fade</button>
+  <button class="nav-btn" onclick="changeSlide(1)">Slicked-Back Undercut</button>
+  <button class="nav-btn" onclick="changeSlide(2)">Short Comb-Over</button>
+  <button class="nav-btn" onclick="changeSlide(3)">French Crop</button>
+  <button class="nav-btn" onclick="changeSlide(4)">Permed Mohawk</button>
+  <button class="nav-btn" onclick="changeSlide(5)">Two Block</button>
+  <button class="nav-btn" onclick="changeSlide(6)">Comma Hair</button>
+  <button class="nav-btn" onclick="changeSlide(7)">Cepak</button>
+  <button class="nav-btn" onclick="changeSlide(8)">Mullet Two Block</button>
+  <button class="nav-btn" onclick="changeSlide(9)">Long Trim</button>
+</div>
+
+<div class="slider-container">
+  <img class="slider-img" src="https://images.tokopedia.net/img/JFrBQq/2022/4/25/f4222262-7fb3-4372-996f-e2534793dbe6.jpg" alt="Product Image">
+  <div class="product-info">
+    <h2>Low Fade</h2>
+  </div>
+</div>
+<div class="slider-container">
+  <img class="slider-img" src="https://images.tokopedia.net/img/JFrBQq/2022/4/25/f3306b11-cc29-450f-aeb1-a05a49799bf3.jpg" alt="Product Image">
+  <div class="product-info">
+    <h2>Slicked-Back Undercut</h2>
+  </div>
+</div>
+<div class="slider-container">
+  <img class="slider-img" src="https://images.tokopedia.net/img/JFrBQq/2022/4/25/4e9e1bea-07d0-4f76-a999-224f599639f6.jpg" alt="Product Image">
+  <div class="product-info">
+    <h2>Short Comb-Over</h2>
+  </div>
+</div>
+<div class="slider-container">
+  <img class="slider-img" src="https://image.popmama.com/content-images/post/20230203/french-crop-short-c712d742b53b120b1e0d0ca27dec40c1.jpg?width=600&height=auto" alt="Product Image">
+  <div class="product-info">
+    <h2>French Crop</h2>
+  </div>
+</div>
+<div class="slider-container">
+  <img class="slider-img" src="https://cdnwpseller.gramedia.net/wp-content/uploads/2022/08/12073344/gaya-rambut-mohawk-panjang-belakang3-364x362.jpg" alt="Product Image">
+  <div class="product-info">
+    <h2>Permed Mohawk</h2>
+  </div>
+</div>
+<div class="slider-container">
+  <img class="slider-img" src="https://www.blibli.com/friends-backend/wp-content/uploads/2022/04/two-block-haircut-messy.jpg" alt="Product Image">
+  <div class="product-info">
+    <h2>Two Block</h2>
+  </div>
+</div>
+<div class="slider-container">
+  <img class="slider-img" src="https://i.pinimg.com/736x/f3/df/a8/f3dfa885e8a96095e2ab1d782a467d57.jpg" alt="Product Image">
+  <div class="product-info">
+    <h2>Comma Hair</h2>
+  </div>
+</div>
+<div class="slider-container">
+  <img class="slider-img" src="https://www.allthingshair.com/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F98122163f780a55b17c9f15c4c0fd3ac1ae79937-1080x1080.jpg%3Fq%3D85%26fit%3Dclip%26auto%3Dformat&w=3840&q=75" alt="Product Image">
+  <div class="product-info">
+    <h2>Cepak</h2>
+  </div>
+</div>
+<div class="slider-container">
+  <img class="slider-img" src="https://tangerangnews.com/assets/uploaded/photo/2022/10/10/1859b21f28a16df47a7e743b8cfcb5d2.jpg?rand=30" alt="Product Image">
+  <div class="product-info">
+    <h2>Mullet Two Block</h2>
+  </div>
+</div>
+<div class="slider-container">
+  <img class="slider-img" src="https://pbs.twimg.com/media/EI7bmDZX0AMJx6b.jpg" alt="Product Image">
+  <div class="product-info">
+    <h2>Long Trim</h2>
+  </div>
+</div>
+</div>
+
+<style>
+.cukuran {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  margin-top: 90px;
+  background-color: #292929;
+  overflow: hidden;
+  justify-content: space-between;
+  
+
+}
+
+.cukuran .choose{
+  margin-top: 40px;
+  margin-left: 6%;
+  color: white;
+  font-family: 'poppins';
+  font-size: 40px;
+}
+
+.choose span{
+  border-bottom: solid 3px darkgoldenrod;
+  font-size: 40px;
+  font-family: 'poppins';
+}
+
+.slider-nav {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 470px;
+  gap: 10px;
+  border-radius: 10px;
+  margin-left: 4%;
+  background-color: #292929;
+  justify-content: center;
+
+
+}
+
+.slider-nav button{
+  background-color: rgb(202, 202, 202);
+  border: none;
+  border-radius: 10px 10px 0 0;
+  width: 140px;
+  height: 50px;
+  margin-top: 10px;
+  border-bottom: solid 3px darkgoldenrod;
+  transition: 0.3s;
+}
+
+.slider-nav button:hover{
+  background-color: rgb(39, 39, 39);
+  color: rgb(255, 255, 255);
+  border-bottom: solid 2px white;
+}
+
+.slider-container {
+  position: absolute;
+  top: 50%;
+  width: 400px;
+  height: 450px;
+  left: 60%;
+  transform: translate(-1%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider-container.active {
+  opacity: 1;
+}
+
+.slider-container img {
+  width: 100%;
+  border: solid 6px rgb(73, 73, 73);
+  border-radius: 20px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: -4px 0 6px -4px rgba(0, 0, 0, 0.5),
+            4px 0 6px -4px rgba(0, 0, 0, 0.9),
+            0 4px 6px -4px rgba(0, 0, 0, 0.5);
+}
+
+.product-info {
+  text-align: center;
+
+  
+  
+}
+
+.product-info h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  font-family: 'poppins';
+  margin-top: 20px;
+}
+
+
+
+.slider-nav button {
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.slider-nav button.active {
+  background-color: rgb(39, 39, 39);
+  color: #fff;
+  border-bottom: solid 2px rgb(224, 224, 224);
+}
+@media only screen and (max-width: 480px){
+
+
+.cukuran {
+position: relative;
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+height: 900px;
+background-color: #292929;
+overflow: hidden;
+justify-content: space-between;
+
+}
+
+.cukuran .choose{
+margin-top: 24px;
+margin-left: 10%;
+margin-right: 10%;
+color: white;
+font-family: 'poppins';
+font-size: 35px;
+
+}
+
+.choose span{
+border-bottom: solid 3px darkgoldenrod;
+font-size: 35px;
+font-family: 'poppins';
+}
+
+.slider-nav {
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+width: 100%;
+gap: 12px;
+height: 100px;
+margin-top: 100px;
+border-radius: 10px;
+margin-left: 1%;
+background-color: #292929;
+justify-content: center;
+
+
+}
+
+.slider-nav button{
+background-color: rgb(255, 255, 255);
+border: none;
+border-radius: 10px 10px 0 0 ;
+width: 150px;
+height: 50px;
+margin-top: -8px;
+transition: 0.3s;
+}
+
+.slider-nav button:hover{
+background-color: rgb(39, 39, 39);
+color: white;
+
+}
+
+.slider-container.active {
+opacity: 1;
+}
+
+.slider-container {
+position: absolute;
+top: 0;
+width: 100%;
+height: 300px;
+left: 0;
+transform: translate(0);
+opacity: 0;
+display: flex;
+flex-direction: column;
+margin-top: 190px;
+align-items: center;
+transition: opacity 0.5s ease;
+}
+
+
+
+.slider-container img {
+width: 280px;
+height: 280px;
+border-radius: 20px;
+
+object-fit: cover;
+box-shadow: -4px 0 6px -4px rgba(0, 0, 0, 0.5),
+          4px 0 6px -4px rgba(0, 0, 0, 0.9),
+          0 4px 6px -4px rgba(0, 0, 0, 0.5);
+}
+
+.product-info {
+text-align: center;
+
+
+
+}
+
+.product-info h2 {
+margin: 0;
+display: none;
+font-size: 24px;
+font-weight: bold;
+color: white;
+font-family: 'poppins';
+margin-top: 20px;
+}
+
+
+
+.slider-nav button {
+padding: 5px 10px;
+margin-bottom: 5px;
+font-size: 14px;
+cursor: pointer;
+}
+
+.slider-nav button.active {
+background-color: rgb(39, 39, 39);
+color: #fff;
+border-bottom: solid 2px white;
+}
+
+
+
+
+
+} 
+</style>
+
+<script>
+var slideIndex = 0;
+var slides = document.getElementsByClassName("slider-container");
+var navButtons = document.getElementsByClassName("nav-btn");
+
+showSlide(slideIndex);
+
+function changeSlide(index) {
+  if (index >= slides.length) {
+    index = 0;
+  } else if (index < 0) {
+    index = slides.length - 1;
+  }
+  
+  slideIndex = index;
+  showSlide(slideIndex);
+}
+
+function showSlide(index) {
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+    navButtons[i].classList.remove("active");
+  }
+
+  slides[index].classList.add("active");
+  navButtons[index].classList.add("active");
+}
+</script>
+
+
+
+
+
+
+
+</section>
+
+<footer>
+    <div class="footer-section">
+        <div>
+            <h2><span><div class="fa fa-xing"></div></span> Barberbor</h2>
+            <div class="social-links">
+                <a href="">
+                    <i class="fa fa-instagram"> </i>
+                </a>
+    
+                <a href="">
+                  <i class="fa fa-facebook"> </i>   
+                </a>
+    
+                <a href="">
+                  <i class="fa fa-whatsapp"> </i>    
+                </a>
+    
+    
+              </div>
+        
+        </div>
+    
+    
+        <div class="footer-item">
+          <menu>
+              <h2>Adress</h2>
+  
+              <li>
+                  <p>Jl. kemang Barat XI A No 26, kemang<br>  Jakarta Selatan, Jakarta, Indonesia</p>
+              </li>
+  
+            
+          </menu>
+        </div>
+    
+    </div>
+    
+    <div class="footer-bottom">
+        &copy; Berberbor ltd. 2023 all right reversed
+    </div>
+    
+    </footer>
+    
+    
+    <style>
+        .footer-section span{
+          border: solid 3px yellow;
+          padding: 3px 5px;
+          font-size: 22px;
+        }
+        
+      
+        .footer-section i{
+          font-size: 20px;
+          width: 100%;
+          justify-content: space-between;
+          margin-right: 15px;
+          text-align: center;
+          margin-top: 0;
+          
+          
+        }
+
+        .footer-section p{
+          text-decoration: underline;
+        }
+
+        .footer-section h2{
+          font-size: 30px;
+          margin-top: -1px; 
+        }
+
+        footer a { 
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+            font-size: 16px;
+            font-family: 'poppins';
+        }
+    
+        footer a:hover{
+            color: rgb(169, 169, 169);
+        }
+    
+        footer{
+            background: rgb(126, 126, 126);
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+            font-size: 16px;
+            color: white;
+          
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 100px;
+            bottom: 0px;
+          
+    }
+    
+    .footer-section{
+    text-align: left;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 48px;
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 16px;  
+        
+    
+    }
+    
+    .social-links{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    
+    }
+    
+    .social-links img{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .footer-bottom{
+        min-height: 60px;
+        margin-top: 52px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: #1f1b3d;
+        font-size: 14px;
+        opacity: .8;
+    }
+    
+    .footer-section .logo {
+        width: 100px;
+        height: 50px;
+      
+        margin-bottom: 20px;
+    }
+    
+    .footer-section{
+      margin-top: 30px;
+    }
+
+    .footer-item h2{
+        text-align: left;
+        color: white;
+        margin-top: 0px;
+        font-size: 16px;
+        opacity: 0.7;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .footer-item h2{
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-family: 'poppins';
+    
+        
+    }
+    
+    .footer-item menu{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      
+    }
+
+    
+    .footer-item menu li {
+        margin-bottom: 16px;
+    }
+    
+    @media only screen and (max-width: 1100px){
+      footer {
+        margin-top:500px;
+      }
+    }
+
+    @media only screen and (max-width: 720px){
+      footer{
+        margin-top: 1100px;
+      }
+      
+    }
+
+
+    @media only screen and (max-width: 480px){
+      footer a { 
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+            font-size: 18px;
+            font-family: 'poppins';
+        }
+    
+        footer a:hover{
+            color: rgb(169, 169, 169);
+        }
+    
+        footer{
+            background: rgb(126, 126, 126);
+          
+            color: white;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 90px;
+            bottom: 0px;
+          
+    }
+    
+    .footer-section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:40px;
+        margin: 0 auto;
+        max-width: 720px;
+        padding: 30px;  
+    
+    }
+    
+    .social-links{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    
+    }
+    
+    .social-links img{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .footer-bottom{
+        min-height: 60px;
+        margin-top: 52px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: #1f1b3d;
+        font-size: 14px;
+        opacity: .8;
+    }
+    
+    .footer-section .logo {
+        width: 100px;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-item h2{
+        text-align: left;
+        color: white;
+        margin-top: 0px;
+        font-size: 16px;
+        opacity: 0.7;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .footer-item h2{
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-family: 'poppins';
+    
+        
+    }
+    
+    .footer-item menu{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .footer-item menu li {
+        margin-bottom: 16px;
+    }
+    }
+    </style>
+
+</body>
+</html>
