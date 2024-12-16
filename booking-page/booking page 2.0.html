@@ -38,21 +38,21 @@
             <h2>P<span class="underline">ilih Pelayan</span>an</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="kartu p-3 service-option" data-service="Potong Rambut 30k" data-price="15">
-                        <h5><img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-1-70x62.png" alt=""> Potong Rambut</h5>
+                    <div class="kartu p-3 service-option" data-service="Potong Rambut" data-price="30000">
+                        <h5><img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-1-70x62.png" alt=""> Potong Rambut (30k)</h5>
                       
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="kartu p-3 service-option" data-service="Cukur Jenggot 10k" data-price="10">
+                    <div class="kartu p-3 service-option" data-service="Cukur Jenggot" data-price="10000">
                        
-                        <h5><img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-3-70x62.png" alt=""> Cukur Jenggot</h5>
+                        <h5><img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-3-70x62.png" alt=""> Cukur Jenggot (10k)</h5>
                       
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="kartu p-3 service-option" data-service="Cukur Kumis 10k" data-price="8">
-                        <h5><img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-4-70x62.png" alt=""> Cukur Kumis</h5>
+                    <div class="kartu p-3 service-option" data-service="Cukur Kumis" data-price="10000">
+                        <h5><img src="https://ld-wt73.template-help.com/intense/intense-barbershop/images/icon-service-4-70x62.png" alt=""> Cukur Kumis (10k)</h5>
                      
                     </div>
                 </div>
@@ -132,49 +132,50 @@
 
 
     <script>
-        const services = document.querySelectorAll('.service-option');
-        const timeSlots = document.querySelectorAll('.time-slot');
-        const payments = document.querySelectorAll('.payment-option');
-        const confirmBtn = document.getElementById('confirm-btn');
-        const ticketCanvas = document.getElementById('ticketCanvas');
-        const downloadTicket = document.getElementById('downloadTicket');
-    
-        let selectedServices = [];
-        let selectedTime = null;
-        let selectedPayment = null;
-    
-        // Get today's and tomorrow's date
-        const today = new Date();
-        const tomorrow = new Date();
-        tomorrow.setDate(today.getDate() + 1);
-    
-        // Format dates to readable strings
-        const formatDate = (date) => {
-            const year = date.getFullYear();
-            const month = String(date.getMonth() + 1).padStart(2, '0');
-            const day = String(date.getDate()).padStart(2, '0');
-            return `${year}-${month}-${day}`;
-        };
-    
-        const todayFormatted = formatDate(today);
-        const tomorrowFormatted = formatDate(tomorrow);
-    
-        services.forEach(service => {
-            service.addEventListener('click', () => {
-                service.classList.toggle('selected');
-                const serviceName = service.dataset.service;
-                const serviceIndex = selectedServices.indexOf(serviceName);
-                if (serviceIndex > -1) {
-                    selectedServices.splice(serviceIndex, 1);
-                } else {
-                    selectedServices.push(serviceName);
-                }
-            });
-        });
-    
-        timeSlots.forEach(slot => {
+       const services = document.querySelectorAll('.service-option');
+const timeSlots = document.querySelectorAll('.time-slot');
+const payments = document.querySelectorAll('.payment-option');
+const confirmBtn = document.getElementById('confirm-btn');
+const ticketCanvas = document.getElementById('ticketCanvas');
+const downloadTicket = document.getElementById('downloadTicket');
+const notificationContainer = document.getElementById('notification-container');
+
+let selectedServices = [];
+let selectedTime = null;
+let selectedPayment = null;
+
+// Get today's and tomorrow's date
+const today = new Date();
+const tomorrow = new Date();
+tomorrow.setDate(today.getDate() + 1);
+
+// Format dates to readable strings
+const formatDate = (date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+};
+
+const todayFormatted = formatDate(today);
+const tomorrowFormatted = formatDate(tomorrow);
+
+services.forEach(service => {
+    service.addEventListener('click', () => {
+        service.classList.toggle('selected');
+        const serviceName = service.dataset.service;
+        const servicePrice = parseFloat(service.dataset.price || 0); // Ambil harga layanan
+        const serviceIndex = selectedServices.findIndex(s => s.name === serviceName);
+        if (serviceIndex > -1) {
+            selectedServices.splice(serviceIndex, 1);
+        } else {
+            selectedServices.push({ name: serviceName, price: servicePrice });
+        }
+    });
+});
+
+timeSlots.forEach(slot => {
     slot.addEventListener('click', () => {
-        // Periksa apakah slot sudah nonaktif
         if (slot.classList.contains('disabled')) {
             alert('Slot ini sudah dipesan. Silakan pilih slot lain.');
             return;
@@ -186,13 +187,14 @@
             time: slot.dataset.time
         };
     });
-     payments.forEach(payment => {
-            payment.addEventListener('click', () => {
-                payments.forEach(p => p.classList.remove('selected'));
-                payment.classList.add('selected');
-                selectedPayment = payment.dataset.payment;
-            });
-        });
+});
+
+payments.forEach(payment => {
+    payment.addEventListener('click', () => {
+        payments.forEach(p => p.classList.remove('selected'));
+        payment.classList.add('selected');
+        selectedPayment = payment.dataset.payment;
+    });
 });
 
 confirmBtn.addEventListener('click', () => {
@@ -201,47 +203,37 @@ confirmBtn.addEventListener('click', () => {
         return;
     }
 
-    // Referensi container notifikasi
-    const notificationContainer = document.getElementById('notification-container');
-
     // Tampilkan pemberitahuan "Payment sedang diproses"
     notificationContainer.innerText = 'Pembayaran sedang diproses...';
-    notificationContainer.className = 'info'; // Tambahkan kelas desain
-    notificationContainer.classList.remove('hidden'); // Tampilkan elemen
+    notificationContainer.className = 'info';
+    notificationContainer.classList.remove('hidden');
 
-    // Simulasi proses selama 3 detik
     setTimeout(() => {
-        // Ubah pemberitahuan menjadi "Terimakasih sudah memesan"
         notificationContainer.innerText = 'Terimakasih sudah memesan!';
-        notificationContainer.className = 'success'; // Ubah desain
+        notificationContainer.className = 'success';
 
-        // Simulasi pengiriman tiket setelah 2 detik
         setTimeout(() => {
-            // Hapus pilihan slot waktu setelah booking selesai
             timeSlots.forEach(slot => {
                 if (slot.classList.contains('selected')) {
                     slot.classList.remove('selected');
-                    slot.classList.add('disabled'); // Tambahkan kelas disabled
-                    slot.innerText += ' (sudah dipesan)'; // Tambahkan teks sebagai indikasi
+                    slot.classList.add('disabled');
+                    slot.innerText += ' (sudah dipesan)';
                 }
             });
+
             const ctx = ticketCanvas.getContext('2d');
             ctx.clearRect(0, 0, ticketCanvas.width, ticketCanvas.height);
 
-            // Membuat gradasi linear untuk latar belakang
             const gradient = ctx.createLinearGradient(0, 0, ticketCanvas.width, ticketCanvas.height);
-            gradient.addColorStop(0, '#E8C600'); // Warna pink muda
-            gradient.addColorStop(1, '#F4D53D'); // Warna peach
+            gradient.addColorStop(0, '#E8C600');
+            gradient.addColorStop(1, '#F4D53D');
 
-            // Terapkan gradasi sebagai latar belakang
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, ticketCanvas.width, ticketCanvas.height);
 
-            // Menambahkan elemen modern dan lucu
-            ctx.fillStyle = '#fff'; // Warna teks
-            ctx.font = 'bold 20px "raleway", cursive'; // Font playful
+            ctx.fillStyle = '#fff';
+            ctx.font = 'bold 20px "poppins", cursive';
 
-            // Mendapatkan tanggal hari ini atau besok
             const today = new Date();
             const selectedDate = selectedTime.day === "today" 
                 ? today 
@@ -249,13 +241,16 @@ confirmBtn.addEventListener('click', () => {
 
             const formattedDate = selectedDate.toISOString().split('T')[0];
 
+            // Hitung total harga
+            const totalPrice = selectedServices.reduce((sum, service) => sum + service.price, 0);
+
             // Tambahkan teks tiket
             ctx.fillText('🎫 Barberbor Ticket', 20, 40);
-            ctx.fillText(` ${selectedServices.join(', ')}`, 20, 100);
-            ctx.fillText(` ${formattedDate} at ${selectedTime.time}`, 20, 140);
-            ctx.fillText(`Pembayaran Via ${selectedPayment}`, 20, 180);
+            ctx.fillText(`${selectedServices.map(s => s.name).join(', ')}`, 20, 100);
+            ctx.fillText(`Harga Total: Rp ${totalPrice.toLocaleString()}`, 20, 140);
+            ctx.fillText(`Tanggal: ${formattedDate} at ${selectedTime.time}`, 20, 180);
+            ctx.fillText(`Pembayaran Via: ${selectedPayment}`, 20, 220);
 
-            // Buat tiket untuk diunduh
             const ticketUrl = ticketCanvas.toDataURL();
             const downloadLink = document.createElement('a');
             downloadLink.href = ticketUrl;
@@ -270,11 +265,11 @@ confirmBtn.addEventListener('click', () => {
             selectedTime = null;
             selectedPayment = null;
 
-            // Sembunyikan pemberitahuan
             notificationContainer.classList.add('hidden');
-        }, 2000); // 2 detik untuk simulasi pengiriman tiket
-    }, 3000); // 3 detik untuk simulasi payment processing
+        }, 2000);
+    }, 3000);
 });
+
 
 
 
